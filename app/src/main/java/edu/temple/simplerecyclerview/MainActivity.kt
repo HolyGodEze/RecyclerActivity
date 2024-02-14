@@ -13,9 +13,13 @@ class MainActivity : AppCompatActivity() {
         // Step 1: Reference RecyclerView object
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
+
+        val numbers = Array(100){i -> i+1}
+
         //Step 2: Provide a LayoutManager
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         //Step 4: Provide a RecyclerView.Adapter
+        recyclerView.adapter = NumberDisplayAdapter(numbers)
     }
 }
